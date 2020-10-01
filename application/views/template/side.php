@@ -36,5 +36,11 @@
 				React
 			</a>
 		</li>
+		<li class="<?= $materiName == 'Golang'  ?'active' :'' ?>">
+			<a href="<?= base_url('home/golangView'); ?>">
+				<img src="<?= base_url('asset/img/react.png') ?>" style="width:10%">
+				Golang
+			</a>
+		</li>
 	</ul>
 </nav>

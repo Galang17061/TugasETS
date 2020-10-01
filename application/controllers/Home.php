@@ -64,4 +64,14 @@ class Home extends CI_Controller{
         $pagination_name = $this->input->post('pagination_name');
         $this->load->view('materi/'.$materiName.'/'.$pagination_name);
     }
+
+    public function golangView(){
+        $this->load->view('template/footer');
+        $this->load->view('template/header');
+        $data['materiName'] = 'Golang';
+        $data['pagination'] = 'latarBelakang';
+        $data['extra_script'] = '<script src="'.base_url().'asset/js/pagination.js"></script>';
+        $this->load->view('template/side',$data);
+        $this->load->view('template/content',$data);
+    }
 }
